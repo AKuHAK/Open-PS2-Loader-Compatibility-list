@@ -19,7 +19,7 @@ jobs:
       - name: ProcessData script execution
         run: |
           cd script
-          ./ProcessData.sh ${{ github.event.issue.number }}
+          ./ProcessData.sh ${{ github.event.issue.number }} ${{ github.repository }}
 
       - name: Create Pull Request
         id: prmaker
